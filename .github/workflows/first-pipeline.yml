@@ -29,7 +29,7 @@ jobs:
 
 
   SharedDev-BR:
-    #if: ${{ github.event.inputs.job == 'shareddev'}}
+    if: ${{ github.event.inputs.job == 'shareddev'}}
     runs-on: windows-2019
     needs: build
     environment: shareddev
@@ -52,7 +52,7 @@ jobs:
 
 
   Production-BR:
-    #if: ${{ github.event.inputs.job == 'shareddev'}}
+    if: ${{ github.event.inputs.job == 'shareddev'}}
     runs-on: windows-2019
     needs: build
     environment: Production
